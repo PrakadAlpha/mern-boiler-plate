@@ -12,9 +12,9 @@ const Register = ({history}) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if(localStorage.getItem('token') && auth.isAuthenticated){
+    if(localStorage.getItem('token') && auth.isAuthenticated)
       history.push('/login');
-    }
+
     if(auth.error === 'User already exists'){
       dispatch(setAlert(auth.error, 'danger'));
       dispatch({type: CLEAR_ERRORS});
@@ -34,11 +34,10 @@ const Register = ({history}) => {
 
   const onSubmit = e => {
     e.preventDefault();
-    if(name === '' || email === '' || password === ''){
+    if(name === '' || email === '' || password === '')
       dispatch(setAlert('Please enter all the fields.', 'danger'));
-    }else{
+    else
       dispatch(register(newUser));
-    }
   }
 
   return (

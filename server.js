@@ -3,7 +3,6 @@ require('colors');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const morgan = require('morgan');
-const cookieParser = require('cookie-parser');
 const path = require('path');
 const connectDb = require('./config/db');
 const auth = require('./routes/auth');
@@ -31,9 +30,6 @@ app.use(express.urlencoded({extended: false}));
 //CORS 
 app.use(cors());
 
-//Cookies parser
-app.use(cookieParser());
-
 //Folder for uploading files or images from the client
 app.use('/uploads', express.static('uploads'));
 
@@ -52,7 +48,7 @@ app.get("*", (req, res) => {
 const PORT = process.env.PORT || 5001;
 const server = app.listen(PORT, () => console.log(`Server running in "${process.env.NODE_ENV}" mode on port "${PORT}"`.yellow.bold));
 
-//Handle the rejections 
+//Handle the promise rejection error
 process.on('unhandledRejection', (err, promise) => {
   console.log('Error: '.red.bold, err.message);
   server.close(() => process.exit(1));
