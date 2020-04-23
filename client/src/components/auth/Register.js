@@ -43,7 +43,7 @@ const Register = ({history}) => {
   return (
     <div className="form-container">
       <h1>
-        Account <span className="text-primary">Register</span>
+        User <span className="text-primary">Register</span>
       </h1>
       <form onSubmit={onSubmit}>
         <div className="form-group">
