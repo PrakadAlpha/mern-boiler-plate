@@ -26,7 +26,7 @@ exports.protect = asyncHandlers(async (req, res, next) => {
 })
 
 
-//Can be used to set the roles up in the route for Authorizing 
+//Can be used to set the roles up in the route for authorizing 
 //users according to role.
 // exports.authorize = (...roles) => {
 //   return (req, res, next) => {
