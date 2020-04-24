@@ -58,13 +58,16 @@
     npm run prod
     ```
 
-### 🤝 Hello Folks!!
+### 🤝 Hello Folks!!  
+
 Twitter : [@PrakadAlpha](https://twitter.com/PrakadAlpha)   
 Blog : [www.prakadalpha.me](https://prakadalpha.me) - Checkout my blog for more cool content..
 
-### 💖 Download & Share
+### 💖 Download & Share  
+
 *Absoultely! Feel free to share the repo and the code,  
 Give a ⭐ __star__ if it was helpful, please do share!*
 
-### ➕ Contribution
+### ➕ Contribution  
+
 *Anyone is welcome to contribute. Please feel free to submit a Pull Request for typo fixes, spelling corrections and improvements etc..*
