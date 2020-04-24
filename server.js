@@ -18,8 +18,23 @@ if(process.env.NODE_ENV === 'development'){
   app.use(morgan('dev'));
 }
 
+
 //Db connection
 connectDb();
+
+//Nosql injection
+app.use(sanitize());
+
+//precautionary security headers
+app.use(helmet());
+
+//CrossSiteScripting
+app.use(xss());
+
+
+ //http parameter pollution attack
+ app.use(hpp());
+
 
 //Json parsing
 app.use(express.json());
