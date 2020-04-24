@@ -6,6 +6,10 @@ const morgan = require('morgan');
 const path = require('path');
 const connectDb = require('./config/db');
 const auth = require('./routes/auth');
+const sanitize = require('express-mongo-sanitize')
+const helmet = require('helmet');
+const xss = require('xss-clean');
+const hpp = require('hpp');
 
 //Initialize express app 
 const app = express();
